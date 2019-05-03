@@ -1,0 +1,504 @@
+:root {
+    --dark-primary-color: #689F38;
+    --light-primary-color: #DCEDC8;
+    --primary-color: #8bc34a;
+    --text-icon: #212121;
+    --accent-color: #FF9800;
+    --primary-text: #212121;
+    --secondary-text: #757575;
+    --divider-color: #BDBDBD;
+
+    --item-width: 200px;
+    --item-width-with-padding: 220px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    padding: 0;
+    margin: 0 auto;
+    width: 1000px;
+    background: white;
+}
+
+/* Login Header */
+.login-header {
+    margin: 200px auto 0;
+    color: #000;
+    background: url(../img/header.jpg);
+    background-size: cover;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 10px;
+}
+
+.login-header h1 {
+    margin: 0;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/** login **/
+.login {
+    position: relative;
+    margin: 80px auto;
+    width: 400px;
+    font-weight: 300;
+    color: black;
+}
+
+.login p {
+    margin: 0 0 10px;
+}
+
+.login p label {
+    font-size: 15px;
+    box-sizing: border-box;
+    float: left;
+    width: 100px;
+    line-height: 40px;
+    padding-right: 10px;
+    font-weight: 100;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+input[type=text], input[type=password] {
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 25px;
+    color: black;
+    background: white;
+    border: #000 1px solid;
+    border-radius: 5px;
+}
+
+.login input[type=text], input[type=password] {
+    height: 40px;
+    width: 300px;
+}
+
+.login button[type=submit] {
+    margin-top: 20px;
+    background: #27AE60;
+    border: none;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 40px;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 3px;
+    color: black;
+    border-bottom: 4px solid #1e8449;
+}
+
+/* Header */
+header {
+    background: url(../img/header.jpg);
+    height: 60px;
+    line-height: 60px;
+    font-size: 32px;
+    padding-left: 30px;
+    background-size: cover;
+}
+
+.menu {
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.menu ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 10px 10px;
+    font-size: 20px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: var(--accent-color);
+    border-radius: 5px;
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.2), 
+                inset 0 -3px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    border: 2px #d27d00 solid;
+}
+
+.menu ul li a:active {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.menu ul li a:hover {
+    opacity: 0.8;
+    transition: .8s;
+}
+
+.contents {
+    float: left;
+}
+
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/** 検索条件 **/
+.condition {
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 10px 10px;
+    width: 900px;
+    border: 1px var(--divider-color) solid;
+    border-radius: 10px;
+}
+
+.condition>p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.condition-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.opened-condition {
+    margin: 20px auto;
+    width:  410px;
+}
+
+.opened-condition p label {
+    font-size: 15px;
+    box-sizing: border-box;
+    float: left;
+    width: 100px;
+    line-height: 40px;
+    padding-right: 10px;
+    font-weight: 100;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+.opened-condition p input[type=text], input[type=password] {
+    font-size: 15px;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 300px;
+    height: 40px;
+    color: black;
+    background: white;
+    border: #000 1px solid;
+    border-radius: 5px;
+}
+
+.opened-condition p input[type=button] {
+    box-sizing: border-box;
+    margin: 10px 10px;
+    font-size: 20px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: var(--accent-color);
+    border-radius: 5px;
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.2), 
+                inset 0 -3px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    border: 2px #d27d00 solid;
+}
+
+.closed-condition {
+    margin: 0
+}
+
+.hide {
+    display: none;
+}
+
+/* item list */
+.item-list {
+    display: grid;
+    grid-template: repeat(auto-fill, 300px)/repeat(5, var(--item-width-with-padding));
+}
+
+.item {
+    width: var(--item-width);
+    height: 270px;
+}
+
+.item:hover {
+    opacity: 0.8;
+    transition: .8s;
+}
+
+.item img {
+    width: var(--item-width);
+    height: var(--item-width);
+    cursor: pointer;
+}
+
+.item h1 {
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+.item > .sub-sentence {
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0;
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+/* album-detail */
+
+#mask {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#album-detail {
+    background: #fff;
+    width: 900px;
+    height: 600px;
+    padding: 10px;
+    border: 1px -var(--divider-color) solid;
+    border-radius: 10px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: .8s;
+    z-index: 2;
+}
+
+#album-detail h1 {
+    margin: 0;
+    padding: 0 0  0 25px;
+    width: 870px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--primary-color);
+    border-radius: 25px;
+}
+
+#album-detail h2 {
+    margin: 0;
+}
+
+#album-detail p {
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+#detail-close {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    user-select: none;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px #d27d00 solid;
+    background: var(--accent-color);
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.2), 
+    inset 0 -3px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+
+#detail-close:hover {
+    opacity: 0.8;
+    transition: .8s;
+}
+
+#detail-close:active {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.personel-list {
+    padding: 0;
+    list-style: none;
+}
+
+.personel-list li {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+}
+
+.personel-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+}
+
+.box {
+    float: left;
+    overflow: hidden;
+}
+
+.box + .box {
+    margin-left: 20px;
+}
+
+/*****/
+ul.tab-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+ul.tab-menu li {
+    display: inline-block;
+}
+
+ul.tab-menu li span {
+    display: inline-block;
+    font-size: 14px;
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px;
+    color: var(--primary-text);
+    cursor: pointer;
+    user-select: none;
+}
+
+ul.tab-menu li span.active {
+    background: var(--light-primary-color);
+    border: 1px var(--light-primary-color) solid;
+    border-radius: 5px 5px 0 0;
+    color: var(--primary-text);
+}
+
+ul.tab-menu li span:not(.active) {
+    border-radius: 5px 5px 0 0;
+    border-top: 1px var(--divider-color) solid;
+    border-right: 1px var(--divider-color) solid;
+    border-left: 1px var(--divider-color) solid;
+    border-bottom: 1px var(--light-primary-color) solid;
+    color: var(--secondary-text);
+}
+
+ul.tab-menu li span:not(.active):hover {
+    opacity: 0.5;
+    transition: .8s;
+}
+
+.tab-content {
+    border: 1px var(--divider-color) solid;
+    border-radius: 0 5px 5px 5px;
+    width: 550px;
+    height: 370px;
+    margin: 0;
+}
+
+.tab-content:not(.active) {
+    display: none;
+}
+
+.tab-content ol {
+    padding: 10px;
+    margin-top: 0;
+    margin-left: 30px;
+}
+
+.tab-content ul {
+    padding: 10px;
+    margin-top: 0;
+}
+.tab-content ul li {
+    height: 50px;
+    line-height: 50px;
+}
+
+input[type=text].song-name {
+    width: 400px;
+    height: 30px;
+}
+
+input[type=text].artist-name {
+    width: 400px;
+    height: 30px;
+}
+
+ul.album-info {
+    list-style: none;
+    padding-left: 0;
+}
+
+.button {
+    box-sizing: border-box;
+    margin: 10px 10px;
+    font-size: 20px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: var(--accent-color);
+    border-radius: 5px;
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.2), 
+                inset 0 -3px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    border: 2px #d27d00 solid;
+    cursor: pointer;
+    float: left;
+}
+
+.button:active {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.button:hover {
+    opacity: 0.8;
+    transition: .8s;
+}
+
+.controls {
+    clear: both;
+    overflow: hidden;
+}
