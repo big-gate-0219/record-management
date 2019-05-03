@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Do you have the record you wand?</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        Do you have the record you wand?
+    </header>
+
+    <main>
+        <div class="clearfix">
+            <div class="menu">
+                <navi>
+                    <ul>
+                        <li><a href="#">Top page</a></li>
+                        <li><a href="#">Album</a></li>
+                        <li><a href="#">Artist</a></li>
+                        <li><a href="#">Song</a></li>
+                        <li><a href="#">Instrument</a></li>
+                        <li><a href="#">User</a></li>
+                    </ul>
+                </navi>
+            </div>
+            <div class="contents">
+                <div class="condition">
+                    <p>
+                        <span id="condition-toggle" class="condition-toggle">[閉じる]</span>
+                        Search Condition:
+                        <span id="closed-condition" class="closed-condition hide">
+                            <span>纐纈　歩美</span>, <span>AltoSax</span>
+                        </span>
+                    </p>
+                    <div id="opened-condition" class="opened-condition">
+                        <p>
+                            <label for="artistCondition">Artist</label>
+                            <input type="text" name="artistCondition" id="artistCondition">
+                        </p>
+                        <p>
+                            <label for="instrumentCondition">Instrument</label>
+                            <input type="text" name="instrumentCondition" id="instrumentCondition">
+                        </p>
+                        <p>
+                            <label for="songCondition">Song</label>
+                            <input type="text" name="songCondition" id="songCondition">
+                        </p>
+                        <p>
+                            <input type="button" id="search-album" value="Search">
+                        </p>
+                    </div>
+                </div>
+                <div id="album-list" class="item-list" style="clear: both;"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="mask" class="hide"></div>
+
+    <!--アルバム詳細-->
+    <div id="album-detail" class="hide">
+        <div id="detail-close">×</div>
+        <div>
+            <h1>Rainbow Table</h1>
+        </div>
+        <div>
+            <div class="boxContainer">
+                <div class="box">
+                    <img src="img/thumbnail/album/[KouketsuAyumi]RainbowTable.jpg">
+                    <ul class="album-info">
+                        <li><input type="text" id="label" placeholder="レーベル"></li>
+                        <li><input type="text" id="year" placeholder="録音年代"></li>
+                        <li><input type="text" id="studio" placeholder="録音スタジオ"></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <ul class="tab-menu">
+                        <li><span id="tab-menu-songs" class="tab-menu-item active">Tracking Listing</span></li>
+                        <li><span id="tab-menu-personel" class="tab-menu-item">Personel</span></li>
+                    </ul>
+                    <div class="tab-content active" id="tab-content-songs"></div>
+                    <div class="tab-content" id="tab-content-personel"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="button">Delete</div>
+            <div class="button">Change</div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
