@@ -69,14 +69,14 @@
         document.getElementById('studio').value = album.studio;
 
         const songsList = createSongsList(album.song);
-        const songsArea = document.getElementById('tab-content-songs');
+        const songsArea = document.getElementById('content-songs');
         songsArea.childNodes.forEach((childNode) => {
             songsArea.removeChild(childNode);
         });
         songsArea.appendChild(songsList);
 
         const artistList = createArtistList(album.artist);
-        const artristsArea = document.getElementById('tab-content-personel');
+        const artristsArea = document.getElementById('content-personel');
         artristsArea.childNodes.forEach((childNod) => {
             artristsArea.removeChild(childNod);
         });
@@ -122,26 +122,6 @@
         });
         return ul;
     }
-
-    /* アルバム詳細 */
-    const tabMenuSongs = document.getElementById('tab-menu-songs');
-    const tabContentSongs = document.getElementById('tab-content-songs');
-    const tabMenuPersonel = document.getElementById('tab-menu-personel');
-    const tabContentPersonel = document.getElementById('tab-content-personel');
-
-    tabMenuSongs.addEventListener('click', () => {
-        tabMenuSongs.classList.add('active');
-        tabContentSongs.classList.add('active');
-        tabMenuPersonel.classList.remove('active');
-        tabContentPersonel.classList.remove('active');
-    });
-
-    tabMenuPersonel.addEventListener('click', () => {
-        tabMenuSongs.classList.remove('active');
-        tabContentSongs.classList.remove('active');
-        tabMenuPersonel.classList.add('active');
-        tabContentPersonel.classList.add('active');
-    });
 
     const detailClose = document.getElementById('detail-close');
     detailClose.addEventListener('click', () => {

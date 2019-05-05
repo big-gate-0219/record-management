@@ -1,0 +1,69 @@
+/* TabMenu */
+
+/* -- TabMenu List -- */
+.tab-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+.tab-menu ul::after{
+    clear: both;
+}
+
+.tab-menu ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-menu ul li span {
+    display: inline-block;
+    font-size: 14px;
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+
+    text-align: left;
+
+    cursor: pointer;
+    user-select: none;
+
+    position: relative;
+    z-index: 1;
+    top: 1px;
+    background: var(--background-color);
+}
+
+.tab-menu ul li span.active{
+    color: var(--primary-text);
+
+    border-top: 1px var(--divider-color) solid;
+    border-left: 1px var(--divider-color) solid;
+    border-right: 1px var(--divider-color) solid;
+    padding-bottom: 1px;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-menu ul li span:not(.active) {
+    color: var(--secondary-text);
+
+    border: 1px var(--divider-color) solid;
+    border-radius: 5px 5px 0 0;
+}
+
+/* -- TabMenu Content -- */
+.tab-content {
+    width: 550px;
+    height: 370px;
+
+    border: 1px var(--divider-color) solid;
+    border-radius: 0 5px 5px 5px;
+    margin: 0;
+    padding: 10px;
+}
+
+.tab-content:not(.active) {
+    display: none;
+}
